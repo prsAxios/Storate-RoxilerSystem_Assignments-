@@ -2,6 +2,8 @@
 
 A full-stack web application for rating and reviewing stores, built with React.js (Vite) for the frontend and Node.js/Express for the backend.
 
+Demo Video -> [Storate - Google Chrome 2025-09-03 17-16-38.zip](https://github.com/user-attachments/files/22117138/Storate.-.Google.Chrome.2025-09-03.17-16-38.zip)
+
 
 ## 📸 Screenshots  
 
