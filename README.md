@@ -5,6 +5,10 @@ A full-stack web application for rating and reviewing stores, built with React.j
 Demo Video -> [Storate - Google Chrome 2025-09-03 17-16-38.zip](https://github.com/user-attachments/files/22117138/Storate.-.Google.Chrome.2025-09-03.17-16-38.zip)
 
 
+Admin Username -> admin@storate.com
+Admin Password -> Admin@1234
+
+
 ## 📸 Screenshots  
 
 ### Frontend UI  
