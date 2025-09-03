@@ -17,10 +17,13 @@ A full-stack web application for rating and reviewing stores, built with React.j
   <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/541d3587-1d40-4653-a2ee-d2ff52279a2a" />
 
 - Store Listing  
-  ![Store List Screenshot](screenshots/store-list.png)  
-
+  <img width="1915" height="1020" alt="image" src="https://github.com/user-attachments/assets/f1d2b7ba-4dcc-464d-8112-aadbf02cd8cb" />
+ 
 - Store Details + Reviews  
-  ![Store Details Screenshot](screenshots/store-details.png)  
+    <img width="1892" height="1015" alt="image" src="https://github.com/user-attachments/assets/0c109078-7b7d-47c0-9ef8-c140fe19b602" />
+    <img width="1873" height="1008" alt="image" src="https://github.com/user-attachments/assets/01d781c8-cff8-4b40-9ae5-a1030e1e72aa" />
+
+
 
 ### Database  
 - Users Table  
