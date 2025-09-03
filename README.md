@@ -194,30 +194,3 @@ npm test
 1. Set up a PostgreSQL database (e.g., Supabase, Neon, or self-hosted)
 2. Configure environment variables in production
 3. Deploy to a Node.js hosting service that supports PostgreSQL (e.g., Heroku, Render, Railway, or Vercel with a database add-on)
-
-### Frontend Deployment
-1. Build the production version:
-   ```bash
-   cd frontend
-   npm run build
-   ```
-2. Deploy the `dist` folder to a static hosting service (e.g., Vercel, Netlify, GitHub Pages)
-
-## 🤝 Contributing
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
-- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
-- [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
-- [MongoDB](https://www.mongodb.com/) - The database for modern applications
