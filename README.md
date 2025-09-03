@@ -41,7 +41,7 @@ A full-stack web application for rating and reviewing stores, built with React.j
   <img width="1908" height="985" alt="image" src="https://github.com/user-attachments/assets/a1002f67-17de-48e1-bb52-e2696953a74b" />
 
 
-### ER Diagram  
+### Application Flow Diagrams
 
 
 
