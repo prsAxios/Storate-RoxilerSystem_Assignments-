@@ -2,6 +2,39 @@
 
 A full-stack web application for rating and reviewing stores, built with React.js (Vite) for the frontend and Node.js/Express for the backend.
 
+
+## 📸 Screenshots  
+
+### Frontend UI  
+- Login Page  
+  <img width="1912" height="1007" alt="image" src="https://github.com/user-attachments/assets/502dead1-fa01-43b8-bc2f-833ac8ac1f6e" />
+  
+
+- Signup Page  
+  <img width="1919" height="1009" alt="image" src="https://github.com/user-attachments/assets/0e9e6750-5280-442f-b88b-30367824ac10" />
+
+
+- Store Listing  
+  ![Store List Screenshot](screenshots/store-list.png)  
+
+- Store Details + Reviews  
+  ![Store Details Screenshot](screenshots/store-details.png)  
+
+### Database  
+- Users Table  
+  ![Users Table](screenshots/db-users.png)  
+
+- Stores Table  
+  ![Stores Table](screenshots/db-stores.png)  
+
+- Reviews Table  
+  ![Reviews Table](screenshots/db-reviews.png)  
+
+### ER Diagram  
+![ER Diagram](screenshots/erd.png)  
+
+
+
 ## 🌟 Features
 
 ### Frontend
