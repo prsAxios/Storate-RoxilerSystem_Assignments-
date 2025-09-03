@@ -16,8 +16,8 @@ export const userAvatarAtom = atom({
     key: "userAvatarDefault",
     get: ({ get }) => {
       const userId = get(userIdAtom);
-      // Generate realistic human avatar using DiceBear
-      const avatarUrl = `https://api.dicebear.com/7.x/avataaars/svg?seed=${userId}&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf&mouth=smile&style=circle`;
+      // Generate realistic human avatar using DiceBear Personas
+      const avatarUrl = `https://api.dicebear.com/8.x/personas/svg?seed=${userId}&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf&radius=50&size=256`;
       return avatarUrl;
     },
   }),
@@ -31,8 +31,8 @@ export const userAvatarSelector = selector({
   set: ({ set, get }, newValue) => {
     if (!newValue) {
       const userId = get(userIdAtom);
-      // Generate realistic human avatar using DiceBear
-      const avatarUrl = `https://api.dicebear.com/7.x/avataaars/svg?seed=${userId}&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf&mouth=smile&style=circle`;
+      // Generate realistic human avatar using DiceBear Personas
+      const avatarUrl = `https://api.dicebear.com/8.x/personas/svg?seed=${userId}&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf&radius=50&size=256`;
       set(userAvatarAtom, avatarUrl);
     } else {
       set(userAvatarAtom, newValue);

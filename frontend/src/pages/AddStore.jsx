@@ -75,7 +75,7 @@ const AddStore = () => {
 
   return (
     <div className="grid flex-1 gap-4 p-4 sm:px-6 md:gap-8">
-              <Card className="w-full max-w-xl mx-auto rounded-2xl shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 overflow-hidden">
+      <Card className="w-full max-w-xl mx-auto rounded-2xl shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 overflow-hidden">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <CardHeader className="border-b border-slate-200 dark:border-zinc-800">
@@ -87,22 +87,22 @@ const AddStore = () => {
                 name="title"
                 render={({ field }) => (
                   <FormItem className="space-y-0 sm:col-span-3">
-                    <FormLabel className="text-left">Title</FormLabel>
+                    <FormLabel className="text-left">Store Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Title of the store" {...field} />
+                      <Input placeholder="Enter Store Name" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
               <FormField
-                control={form.control}
+                control={form.control}  
                 name="author"
                 render={({ field }) => (
                   <FormItem className="space-y-0 sm:col-span-2">
-                    <FormLabel className="text-left">Author</FormLabel>
+                    <FormLabel className="text-left">Store Owner</FormLabel>
                     <FormControl>
-                      <Input placeholder="Author of the store" {...field} />
+                      <Input placeholder="Enter Store Owner Name" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -130,10 +130,10 @@ const AddStore = () => {
                 name="description"
                 render={({ field }) => (
                   <FormItem className="space-y-0 sm:col-span-3">
-                    <FormLabel className="text-left">Description</FormLabel>
+                    <FormLabel className="text-left">Store address</FormLabel>
                     <FormControl>
                       <Textarea
-                        placeholder="Enter a brief summary of the store..."
+                        placeholder="Enter store address"
                         {...field}
                       />
                     </FormControl>
@@ -146,7 +146,7 @@ const AddStore = () => {
                 name="genre"
                 render={({ field }) => (
                   <FormItem className="space-y-0 sm:col-span-3">
-                    <FormLabel className="text-left">Genre</FormLabel>
+                    <FormLabel className="text-left">Store genre</FormLabel>
                     <FormControl>
                       <SelectGenreCombobox
                         options={genres}
@@ -164,7 +164,7 @@ const AddStore = () => {
                 render={({ field }) => {
                   return (
                     <FormItem className="space-y-0 sm:col-span-2">
-                      <FormLabel>Image</FormLabel>
+                      <FormLabel>Store thumbnail</FormLabel>
                       <FormControl>
                         <Input
                           type="file"

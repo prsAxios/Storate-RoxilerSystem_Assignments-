@@ -14,8 +14,8 @@ import { toast } from "sonner";
 
 const UserCard = ({ user, handleReload }) => {
   const [isLoading, setIsLoading] = useState(false);
-  // Generate realistic human avatar using DiceBear
-  const defaultAvatar = `https://api.dicebear.com/7.x/avataaars/svg?seed=${user._id}&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf&mouth=smile&style=circle`;
+  // Generate realistic human avatar using DiceBear Personas
+  const defaultAvatar = `https://api.dicebear.com/8.x/personas/svg?seed=${user._id}&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf&radius=50&size=256`;
   if (user.picture) console.log(user);
 
   const handlePromotion = async () => {
@@ -43,7 +43,7 @@ const UserCard = ({ user, handleReload }) => {
 
   return (
     <div className="p-1 w-full col-span-2 sm:w-1/2 lg:w-1/3 xl:w-1/4 text-center">
-      <div className="p-2 flex flex-col gap-3 w-full rounded-2xl border relative border-slate-200 dark:border-zinc-800 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300">
+      <div className="p-2 flex flex-col gap-3 w-full rounded-2xl relative border-slate-200 dark:border-zinc-800 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300">
         <div className="flex items-center gap-2 p-2 pb-4 border-b border-slate-200 dark:border-zinc-800">
           <img
             className="w-16 h-16 rounded-full shadow-lg"
@@ -88,24 +88,6 @@ const UserCard = ({ user, handleReload }) => {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-        </div>
-        <div className="grid grid-cols-3 dark:text-zinc-50/60">
-          <div className="flex flex-col items-center">
-            <span className="flex gap-1 items-center justify-center text-base">
-              <span>
-                {user?.likedComments?.length + user?.likedReviews?.length}
-              </span>
-              <Heart size={18} />
-            </span>
-            <span>Likes</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="flex gap-1 items-center justify-center text-base">
-              <span>{user?.reportedBy?.length}</span> <AlertCircle size={18} />
-            </span>
-            <span>Reports</span>
-          </div>
-
         </div>
       </div>
     </div>

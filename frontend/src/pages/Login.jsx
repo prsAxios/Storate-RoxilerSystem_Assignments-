@@ -5,7 +5,6 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import {
   Form,
@@ -25,12 +24,13 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
 
 const LoginForm = () => {
   const [isLoggedIn, setIsLoggedIn] = useRecoilState(isLoggedInAtom);
   const setUserRole = useSetRecoilState(userRoleAtom);
-  // const setUserId = useSetRecoilState(userIdAtom);
   const [isLoading, setIsLoading] = useState(false);
+
   const form = useForm({
     resolver: zodResolver(loginSchema),
     defaultValues: {
@@ -58,7 +58,6 @@ const LoginForm = () => {
         const { token, role } = response.data;
         localStorage.setItem("token", token);
         setUserRole(role);
-        // userId will be set by useUserData hook when it fetches user data
         setIsLoggedIn(true);
         navigate("/stores");
         return response.data.message;
@@ -70,85 +69,81 @@ const LoginForm = () => {
   };
 
   return (
-    <>
-      <div className="grid items-center p-4 min-h-svh bg-[url('./images/dark.png')] bg-cover bg-center">
+    <div className="flex flex-col items-center justify-center p-4 min-h-svh">
+      {/* Awwwards Style Big Heading */}
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="text-6xl md:text-8xl font-extrabold tracking-tight text-white uppercase mb-8 flex items-center gap-4"
+      >
+        <span className="text-blue-600">X</span>
+        Roxiler Systems
+      </motion.h1>
 
-        <Card className="mx-auto max-w-sm">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)}>
-              <CardHeader>
-                <CardTitle className="text-2xl">Login</CardTitle>
-                <CardDescription>
-                  Enter your email below to login to your account
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid gap-4">
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem className="grid">
-                        <FormLabel className="text-left">Email</FormLabel>
-                        <FormControl>
-                          <Input placeholder="m@email.com" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="password"
-                    render={({ field }) => (
-                      <FormItem className="grid">
-                        <div className="flex">
-                          <FormLabel className="text-left">Password</FormLabel>
-                          <Link
-                            href="#"
-                            className="ml-auto inline-block text-sm underline">
-                            Forgot your password?
-                          </Link>
-                        </div>
-                        <FormControl>
-                          <Input
-                            type="password"
-                            placeholder="password"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  {isLoading ? (
-                    <Button disabled>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Please wait
-                    </Button>
-                  ) : (
-                    <Button type="submit" className="w-full">
-                      Login
-                    </Button>
+      <Card className="mx-auto max-w-sm bg-white/90 backdrop-blur-md shadow-xl rounded-2xl">
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)}>
+            <CardHeader>
+              <CardDescription>
+                Enter your email below to login to your account
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid gap-4">
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem className="grid">
+                      <FormLabel className="text-left">Email</FormLabel>
+                      <FormControl>
+                        <Input placeholder="m@email.com" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
                   )}
-                </div>
-                <div className="mt-4 text-center text-sm">
-                  Don&apos;t have an account?{" "}
-                  <Link to="/signup" className="underline">
-                    Sign up
-                  </Link>
-                </div>
-              </CardContent>
-            </form>
-          </Form>
-          <div className="w-full text-center">
-            <h3 className="text-zinc-400">user: john.doe@example.com</h3>
-            <h3 className="text-zinc-400">admin: john.doe2@example.com</h3>
-            <h3 className="text-zinc-400">password: password123</h3>
-          </div>
-        </Card>
-      </div>
-    </>
+                />
+                <FormField
+                  control={form.control}
+                  name="password"
+                  render={({ field }) => (
+                    <FormItem className="grid">
+                      <FormLabel className="text-left">Password</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="password"
+                          placeholder="Password"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                {isLoading ? (
+                  <Button disabled>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Please wait
+                  </Button>
+                ) : (
+                  <Button type="submit" className="w-full">
+                    Login
+                  </Button>
+                )}
+              </div>
+              <div className="mt-4 text-center text-sm">
+                Don&apos;t have an account?{" "}
+                <Link to="/signup" className="underline">
+                  Sign up
+                </Link>
+              </div>
+            </CardContent>
+          </form>
+        </Form>
+      </Card>
+    </div>
   );
 };
 

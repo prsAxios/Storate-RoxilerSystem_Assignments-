@@ -4,7 +4,6 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import {
   Form,
@@ -19,11 +18,11 @@ import { userSchema } from "@/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import { Loader2, Upload, X } from "lucide-react";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
 
 const SignupForm = () => {
   const form = useForm({
@@ -45,7 +44,7 @@ const SignupForm = () => {
     if (localStorage.getItem("token")) {
       navigate("/stores");
     }
-  }, []);
+  }, [navigate]);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -103,12 +102,22 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center p-4 min-h-svh bg-[url('./images/dark.png')] bg-cover bg-center">
-      <Card className="mx-2 max-w-2xl h-fit">
+    <div className="flex flex-col items-center p-4 min-h-svh">
+      {/* Awwwards Style Big Heading */}
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="text-6xl md:text-8xl font-extrabold tracking-tight text-white uppercase mb-8 flex items-center gap-4"
+      >
+        <span className="text-blue-600">X</span>
+        ROXILER SYSTEMS
+      </motion.h1>
+
+      <Card className="mx-2 max-w-2xl h-fit bg-white/90 backdrop-blur-md shadow-xl rounded-2xl">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <CardHeader>
-              <CardTitle className="text-xl">Sign Up</CardTitle>
               <CardDescription>
                 Enter your information to create an account
               </CardDescription>
@@ -182,7 +191,8 @@ const SignupForm = () => {
                       <FormControl>
                         <select
                           {...field}
-                          className="border rounded-md p-2 bg-white text-black">
+                          className="border rounded-md p-2 bg-white text-black"
+                        >
                           <option value="user">User</option>
                           <option value="owner">Store Owner</option>
                         </select>
@@ -192,10 +202,12 @@ const SignupForm = () => {
                   )}
                 />
 
-                {/* Image Upload Section - Only for User and Store Owner */}
+                {/* Image Upload Section */}
                 {form.watch("role") !== "admin" && (
                   <div className="grid gap-2">
-                    <FormLabel className="text-left">Profile Picture (Optional)</FormLabel>
+                    <FormLabel className="text-left">
+                      Profile Picture (Optional)
+                    </FormLabel>
                     <div className="flex items-center gap-4">
                       <div className="relative">
                         <input
@@ -235,6 +247,7 @@ const SignupForm = () => {
                     </p>
                   </div>
                 )}
+
                 {isLoading ? (
                   <Button disabled>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />

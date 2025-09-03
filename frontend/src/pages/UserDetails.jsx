@@ -15,8 +15,8 @@ const UserDetails = () => {
   const [isLoading, setIsLoading] = useState(false);
   let { userId } = useParams();
   const pictureUrl = `${import.meta.env.VITE_BACKEND_URL}/users/${userId}/picture`;
-  // Generate realistic human avatar using DiceBear
-  const defaultAvatar = `https://api.dicebear.com/7.x/avataaars/svg?seed=${userId}&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf&mouth=smile&style=circle`;
+  // Generate realistic human avatar using DiceBear Personas
+  const defaultAvatar = `https://api.dicebear.com/8.x/personas/svg?seed=${userId}&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf&radius=50&size=256`;
   const setPageTitle = useSetRecoilState(pageTitleAtom);
   useEffect(() => setPageTitle("User Profile"), []);
 
