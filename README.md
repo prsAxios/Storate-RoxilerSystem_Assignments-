@@ -39,8 +39,19 @@ A full-stack web application for rating and reviewing stores, built with React.j
 
 
 ### ER Diagram  
-![ER Diagram](screenshots/erd.png)  
 
+
+
+![Diagram_1](https://github.com/user-attachments/assets/2fcb3ef6-fa9f-4dc8-bfc5-3ef1a3948dff)
+![Diagram_2](https://github.com/user-attachments/assets/11c4f43a-eb25-409c-a013-fecc3a6ffb4d)
+![Diagram_3](https://github.com/user-attachments/assets/cf2ce7aa-d72b-4eab-9f97-21afa399530b)
+
+
+
+
+
+
+ 
 
 
 ## 🌟 Features
