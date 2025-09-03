@@ -44,17 +44,15 @@ A full-stack web application for rating and reviewing stores, built with React.j
 ### Application Flow Diagrams
 
 
-
+1->Rating and reviews flow
 ![Diagram_1](https://github.com/user-attachments/assets/2fcb3ef6-fa9f-4dc8-bfc5-3ef1a3948dff)
+
+2->store management flow
 ![Diagram_2](https://github.com/user-attachments/assets/11c4f43a-eb25-409c-a013-fecc3a6ffb4d)
+
+3->Data flow (Authentication flow)
 ![Diagram_3](https://github.com/user-attachments/assets/cf2ce7aa-d72b-4eab-9f97-21afa399530b)
 
-
-
-
-
-
- 
 
 
 ## 🌟 Features
@@ -168,84 +166,4 @@ VITE_API_URL=http://localhost:5000/api/v1
    ```
    The frontend will be available at `http://localhost:5173`
 
-## 🏗️ Project Structure
 
-```
-store-rate/
-├── backend/               # Backend server
-│   ├── config/           # Configuration files
-│   ├── controllers/      # Route controllers
-│   ├── middleware/       # Custom middleware
-│   ├── models/           # Database models
-│   ├── routes/           # API routes
-│   ├── utils/            # Utility functions
-│   ├── .env              # Environment variables
-│   ├── index.js          # Entry point
-│   └── package.json
-│
-└── frontend/             # Frontend React app
-    ├── public/           # Static files
-    ├── src/
-    │   ├── atoms/        # Jotai state atoms
-    │   ├── components/   # Reusable components
-    │   ├── hooks/        # Custom React hooks
-    │   ├── pages/        # Page components
-    │   ├── utilities/    # Utility functions
-    │   ├── App.jsx       # Main App component
-    │   └── main.jsx      # Entry point
-    ├── .env              # Frontend environment variables
-    └── package.json
-```
-
-## 📝 API Endpoints
-
-### Authentication
-- `POST /api/v1/auth/register` - Register a new user
-- `POST /api/v1/auth/login` - Login user
-- `GET /api/v1/auth/me` - Get current user
-- `PUT /api/v1/auth/updatedetails` - Update user details
-- `PUT /api/v1/auth/updatepassword` - Update password
-- `POST /api/v1/auth/forgotpassword` - Forgot password
-- `PUT /api/v1/auth/resetpassword/:resettoken` - Reset password
-
-### Users
-- `GET /api/v1/users` - Get all users (admin only)
-- `GET /api/v1/users/:id` - Get single user
-- `PUT /api/v1/users/:id` - Update user (admin only)
-- `DELETE /api/v1/users/:id` - Delete user (admin only)
-
-### Stores
-- `GET /api/v1/stores` - Get all stores
-- `GET /api/v1/stores/:id` - Get single store
-- `POST /api/v1/stores` - Create new store
-- `PUT /api/v1/stores/:id` - Update store
-- `DELETE /api/v1/stores/:id` - Delete store
-- `POST /api/v1/stores/:id/photo` - Upload store photo
-
-### Reviews
-- `GET /api/v1/reviews` - Get all reviews
-- `GET /api/v1/reviews/:id` - Get single review
-- `POST /api/v1/stores/:storeId/reviews` - Add review for store
-- `PUT /api/v1/reviews/:id` - Update review
-- `DELETE /api/v1/reviews/:id` - Delete review
-
-## 🧪 Testing
-
-To run tests:
-
-```bash
-# Run backend tests
-cd backend
-npm test
-
-# Run frontend tests
-cd ../frontend
-npm test
-```
-
-## 🚀 Deployment
-
-### Backend Deployment
-1. Set up a PostgreSQL database (e.g., Supabase, Neon, or self-hosted)
-2. Configure environment variables in production
-3. Deploy to a Node.js hosting service that supports PostgreSQL (e.g., Heroku, Render, Railway, or Vercel with a database add-on)
