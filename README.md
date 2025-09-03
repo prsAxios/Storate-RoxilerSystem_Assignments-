@@ -9,7 +9,6 @@ A full-stack web application for rating and reviewing stores, built with React.j
 - Login Page  
   <img width="1912" height="1007" alt="image" src="https://github.com/user-attachments/assets/502dead1-fa01-43b8-bc2f-833ac8ac1f6e" />
   
-
 - Signup Page  
   <img width="1919" height="1009" alt="image" src="https://github.com/user-attachments/assets/0e9e6750-5280-442f-b88b-30367824ac10" />
 
@@ -17,11 +16,15 @@ A full-stack web application for rating and reviewing stores, built with React.j
   <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/541d3587-1d40-4653-a2ee-d2ff52279a2a" />
 
 - Store Listing  
-  <img width="1915" height="1020" alt="image" src="https://github.com/user-attachments/assets/f1d2b7ba-4dcc-464d-8112-aadbf02cd8cb" />
+  <img width="1910" height="1021" alt="image" src="https://github.com/user-attachments/assets/5b2fe2e0-178f-4ccd-b8fb-e0744e848ba9" />
  
 - Store Details + Reviews  
-    <img width="1892" height="1015" alt="image" src="https://github.com/user-attachments/assets/0c109078-7b7d-47c0-9ef8-c140fe19b602" />
-    <img width="1873" height="1008" alt="image" src="https://github.com/user-attachments/assets/01d781c8-cff8-4b40-9ae5-a1030e1e72aa" />
+<img width="1892" height="1017" alt="image" src="https://github.com/user-attachments/assets/e25ba664-0253-47cb-8bf3-75337aae694b" />
+
+<img width="1890" height="1006" alt="image" src="https://github.com/user-attachments/assets/9a7be923-a4ea-4afb-8fe4-bc02c55e02e7" />
+
+- Users records (Admin View)
+<img width="1914" height="1014" alt="image" src="https://github.com/user-attachments/assets/cd989901-85fc-409c-b3fb-8fbbdfaa16f7" />
 
 
 
