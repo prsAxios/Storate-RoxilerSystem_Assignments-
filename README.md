@@ -25,15 +25,18 @@ A full-stack web application for rating and reviewing stores, built with React.j
 
 
 
-### Database  
+### Database  (Neon Console Screenshots below)
 - Users Table  
-  ![Users Table](screenshots/db-users.png)  
+  <img width="1910" height="1020" alt="image" src="https://github.com/user-attachments/assets/7d636fa1-3e30-4eab-9d92-d084fa0de9f4" />
+
 
 - Stores Table  
-  ![Stores Table](screenshots/db-stores.png)  
+  <img width="1899" height="1012" alt="image" src="https://github.com/user-attachments/assets/01716a0e-30ab-4e39-b8d0-e33bf2638bbc" />
+
 
 - Reviews Table  
-  ![Reviews Table](screenshots/db-reviews.png)  
+  <img width="1908" height="985" alt="image" src="https://github.com/user-attachments/assets/a1002f67-17de-48e1-bb52-e2696953a74b" />
+
 
 ### ER Diagram  
 ![ER Diagram](screenshots/erd.png)  
