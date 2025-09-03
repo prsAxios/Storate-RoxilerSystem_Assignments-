@@ -13,6 +13,8 @@ A full-stack web application for rating and reviewing stores, built with React.j
 - Signup Page  
   <img width="1919" height="1009" alt="image" src="https://github.com/user-attachments/assets/0e9e6750-5280-442f-b88b-30367824ac10" />
 
+- Records Table
+  <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/541d3587-1d40-4653-a2ee-d2ff52279a2a" />
 
 - Store Listing  
   ![Store List Screenshot](screenshots/store-list.png)  
